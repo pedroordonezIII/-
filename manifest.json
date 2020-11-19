@@ -9,11 +9,11 @@
 
 	{
 
-	"src": "/src/images/icons/weatherIcon2.png",
+	"src": "/src/images/icons/weatherIcon.png",
 
 	"type": "image/png",
 
-	"sizes": "512x512"
+	"sizes": "32x32"
 
 	}
 
