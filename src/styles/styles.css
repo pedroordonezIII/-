@@ -1,0 +1,74 @@
+
+body{
+    background-color: black;
+}
+
+/* img{
+    width:100px;
+}  */
+
+
+.styleOne{
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+
+/* .styleTwo{
+    background-color: darkblue;
+    border: 1px solid white;
+} */
+
+.styleThree{
+    color: white;
+    text-align: center;
+    font-size: 19px;
+}
+
+/* @media only screen and (min-width: 1024px){
+    body{
+      margin: 0;
+    }
+    #container{
+        width: 600px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+  } */   
+
+ /* @media only screen and (min-width: 768px){
+    .table{
+        width:px;
+        height: auto;
+        display: flex; 
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+ } */
+
+ 
+
+  @media only screen and (min-width:768px){
+    body{
+      margin: 0;
+    }
+    #container{
+        width: 750px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+     /* #weatherTable1{
+        width:500px;
+        height: auto;
+    } */
+} 
+
+/* .table{
+    display:block;
+} */
+
