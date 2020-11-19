@@ -6,45 +6,15 @@
 "description": "A Weather Application that allows the user to view the current weather and forecast information using their location or by allowing the user to specify a location.",
 
 "icons": [
-	{
-
-	"src": "/src/images/icons/icon-64",
-
-	"type": "image/png",
-
-	"sizes": "64x64"
-
-	},
 
 	{
 
-	"src": "/src/images/icons/icon-128",
+	"src": "/src/images/icons/11d.png",
 
 	"type": "image/png",
 
 	"sizes": "128x128"
 
-	},
-
-	{"src": "/src/images/icons/icon-192",
-
-	"type": "image/png",
-
-	"sizes": "192x192"
-	},
-
-	{"src": "/src/images/icons/icon-256",
-
-	"type": "image/png",
-
-	"sizes": "256x256"
-	},
-
-	{"src": "/src/images/icons/icon-512",
-
-	"type": "image/png",
-
-	"sizes": "512x512"
 	}
 ],
 
