@@ -41,6 +41,23 @@ function displaySearchedLocation(city){
     .then(function(data){
         $("#showLocation p").html(`${data.city.name}, ${data.city.country}`);
     })
+    .catch(function(e){
+        if(search.value == ""){
+            $("#notificationOne").html(`<p> Provide a location input. </p>`);
+            // $("#showCurrentWeatherIcon").html(`<img src="Icons/unknown.png" class="img-fluid"/>`);
+            // $("#showCurrentTemperature p").html(`- °<span>F</span>`);
+            // $("#showCurrentWeather p").html(`-`);
+            // $("#showLocation p").html(`-`);
+            // $("#showCurrentWind").html(`- <span>mph</span>`);
+            // $("#showCurrentHumidity").html(`- <span>%</span>`);
+            // $("#showDate p").html(`-`); 
+            // $("#showTime p").html(`-`); 
+        }
+        else{
+        $("#notificationOne").html(`<p> Location not available. </p>`);
+        //$("#notificationOne").html(`<p> ${e.name} </p>`);
+        }
+    });
 }
 
 function displayCityForecast(city) {
