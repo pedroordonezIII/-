@@ -83,7 +83,7 @@ function displayCityForecast(city) {
     tempMax = Math.round(json.list[i].temp.max)
     humidity = json.list[i].humidity
     wind = Math.round((json.list[i].speed))
-    rain = 100 *(json.list[i].pop)
+    rain = Math.round(100 *(json.list[i].pop))
     newJson = newJson + "{";
     //newJson = newJson + "\"cityId\"" + ": " + cityId + ","
     newJson = newJson + "\"date\"" + ": " + "\"" + date + "\"" + ","
