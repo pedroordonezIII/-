@@ -3,7 +3,7 @@
 
 "name": "Weather Spotter",
 
-"description": "A Weather Application that allows the user to view the current weather and forecast information using their location or by allowing the user to specify a location.",
+"description": "A Weather Application that allows the user to view the current weather and forecast information.",
 
 "icons": [
 
@@ -13,7 +13,7 @@
 
 	"type": "image/png",
 
-	"sizes": "128x128"
+	"sizes": "144x144"
 
 	}
 
