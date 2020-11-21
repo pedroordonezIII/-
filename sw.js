@@ -74,13 +74,6 @@ self.addEventListener('fetch', function(event) {
 
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
-  '/',
-  '/src/styles/styles.css',
-  '/src/js/weatherApp/js', 
-  '/index.html',
-  '/cities.html',
-  '/forecast.html',
-  '/searchForecast.html',
 
 ];
 
