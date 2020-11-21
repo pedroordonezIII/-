@@ -8,7 +8,7 @@ self.addEventListener('fetch', function(event) {
   });
 
 const filesToCache = [
-	'/'
+	'/',
     '/index.html',
     '/cities.html',
     '/forecast.html',
