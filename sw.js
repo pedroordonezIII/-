@@ -75,6 +75,17 @@ self.addEventListener('fetch', function(event) {
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
 
+ 	'index.html',
+    'cities.html',
+    'forecast.html',
+    'searchForecast.html',
+    'src/styles/styles.css', 
+    'src/js/cityWeather.js', 
+    'src/js/forecast.js', 
+    'src/js/recentLocations.js', 
+    'src/js/searchForecast.js', 
+    'src/js/searchWeatherApp.js', 
+    'src/js/weatherApp.js' 
 ];
 
 self.addEventListener('install', function(event) {
