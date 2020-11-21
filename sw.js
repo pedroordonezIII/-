@@ -30,7 +30,11 @@ const filesToCache = [
       caches.open(staticCacheName)
       .then(cache => {
       	console.log("Opened cache")
-        return cache.addAll(filesToCache);
+        cache.addAll(filesToCache.map(function(filesToCache) {
+	    return new Request(filesToCache, { mode: 'no-cors' });
+	    })).then(function() {
+	    console.log('All resources have been fetched and cached.');
+	    });
       })
     );
   });
