@@ -1,17 +1,28 @@
 let defferedPrompt; 
 
+
+window.addEventListener("beforeinstallprompt", (e) => {
+
+	//prevent chrome 67 and earlier from showing the prompt
+	e.preventDefault(); 
+
+	//stash the event so it can be triggered later
+	deferredPrompt = e;
+}); 
+
 window.addEventListener("beforeinstallprompt", (e) => {
 
 	e.preventDefault(); 
 
 	deferredPrompt = e; 
 
+	//update user interface and notify user they can add to homescreen
 	btnAdd.style.display = 'block'; 
 
 }); 
 
 btnAdd.addEventListener("click", (e) => {
-	btnAdd.style.display = "none"; 
+	//btnAdd.style.display = "none"; 
 
 	deferredPrompt.prompt();
 
@@ -26,3 +37,7 @@ btnAdd.addEventListener("click", (e) => {
 			defferedPrompt = null; 
 		});
 });
+
+window.addEventListener("appinstalled", (evt) =>{
+	app.logEvent("A2HS", "installed");
+})
