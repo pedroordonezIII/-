@@ -1,4 +1,4 @@
-navigator.serviceWorker.register('/sw.js').then(reg => {
+navigator.serviceWorker.register('sw.js').then(reg => {
     reg.installing; // the installing worker, or undefined
     reg.waiting; // the waiting worker, or undefined
     reg.active; // the active worker, or undefined
