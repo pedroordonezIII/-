@@ -10,16 +10,16 @@ window.addEventListener("beforeinstallprompt", (e) => {
 	deferredPrompt = e;
 }); 
 
-window.addEventListener("beforeinstallprompt", (e) => {
+// window.addEventListener("beforeinstallprompt", (e) => {
 
-	e.preventDefault(); 
+// 	e.preventDefault(); 
 
-	deferredPrompt = e; 
+// 	deferredPrompt = e; 
 
-	//update user interface and notify user they can add to homescreen
-	btnAdd.style.display = 'block'; 
+// 	//update user interface and notify user they can add to homescreen
+// 	btnAdd.style.display = 'block'; 
 
-}); 
+// }); 
 
 btnAdd.addEventListener("click", (e) => {
 	//btnAdd.style.display = "none"; 
