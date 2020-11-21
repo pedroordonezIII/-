@@ -18,25 +18,7 @@ const filesToCache = [
     '/src/js/recentLocations.js', 
     '/src/js/searchForecast.js', 
     '/src/js/searchWeatherApp.js', 
-    '/src/js/weatherApp.js', 
-    '/src/images/WeatherIcons/01d.png', 
-    '/src/images/WeatherIcons/01n.png', 
-    '/src/images/WeatherIcons/02d.png', 
-    '/src/images/WeatherIcons/02n.png', 
-    '/src/images/WeatherIcons/03d.png', 
-    '/src/images/WeatherIcons/03n.png', 
-    '/src/images/WeatherIcons/04d.png', 
-    '/src/images/WeatherIcons/04n.png', 
-    '/src/images/WeatherIcons/09d.png', 
-    '/src/images/WeatherIcons/09n.png', 
-    '/src/images/WeatherIcons/010d.png', 
-    '/src/images/WeatherIcons/010n.png', 
-    '/src/images/WeatherIcons/011d.png', 
-    '/src/images/WeatherIcons/011n.png', 
-    '/src/images/WeatherIcons/013d.png', 
-    '/src/images/WeatherIcons/013n.png', 
-    '/src/images/WeatherIcons/050d.png', 
-    '/src/images/WeatherIcons/050n.png', 
+    '/src/js/weatherApp.js' 
   ];
   
   const staticCacheName = 'pages-cache-v1';
