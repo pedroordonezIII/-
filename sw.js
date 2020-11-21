@@ -29,7 +29,12 @@ const filesToCache = [
     event.waitUntil(
       caches.open(staticCacheName)
       .then(cache => {
-        return cache.addAll(filesToCache);
+      	console.log("Opened cache")
+        cache.addAll(filesToCache.map(function(filesToCache) {
+	    return new Request(filesToCache, { mode: 'no-cors' });
+	    })).then(function() {
+	    console.log('All resources have been fetched and cached.');
+	    });
       })
     );
   });
