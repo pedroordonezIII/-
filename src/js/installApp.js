@@ -22,7 +22,7 @@ window.addEventListener("beforeinstallprompt", (e) => {
 // }); 
 
 btnAdd.addEventListener("click", (e) => {
-	//btnAdd.style.display = "none"; 
+	btnAdd.style.display = "none"; 
 
 	deferredPrompt.prompt();
 
