@@ -1,6 +1,9 @@
 let defferedPrompt; 
 
 
+/*
+W
+*/
 window.addEventListener("beforeinstallprompt", (e) => {
 
 	//prevent chrome 67 and earlier from showing the prompt
@@ -21,6 +24,11 @@ window.addEventListener("beforeinstallprompt", (e) => {
 
 // }); 
 
+/**
+Upon clicking the button shown at the bottom of the page,
+the usert will be given the option to install the application
+to their homescreen 
+**/
 btnAdd.addEventListener("click", (e) => {
 	btnAdd.style.display = "none"; 
 
