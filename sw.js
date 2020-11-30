@@ -97,7 +97,10 @@ var urlsToCache = [
     'src/js/recentLocations.js', 
     'src/js/searchForecast.js', 
     'src/js/searchWeatherApp.js', 
-    'src/js/weatherApp.js' 
+    'src/js/weatherApp.js',
+    'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js',
+    'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'
+
 ];
 
 self.addEventListener('install', function(event) {
