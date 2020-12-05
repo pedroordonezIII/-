@@ -70,6 +70,7 @@ function searchWeather(city){
         return data;
     })
     .then(function(data){
+        //update the values in the object of objects for each object
         weatherByLocation.temperature.value = Math.round(data.main.temp);
         weatherByLocation.description = data.weather[0].description;
         weatherByLocation.iconId = data.weather[0].icon;
@@ -127,6 +128,7 @@ function searchWeatherForecast(city){
         })
         .then(function(data){
             //console.log(currentDate(data.list[0].dt));
+            //add all the values to the object of objects based on the day 
             weatherForecastByLocation.dayOne.date = (currentDate(data.list[1].dt)); 
             weatherForecastByLocation.dayOne.iconId = data.list[1].weather[0].icon; 
             weatherForecastByLocation.dayOne.description = data.list[1].weather[0].description; 

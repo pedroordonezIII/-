@@ -117,6 +117,7 @@ function getForecast(latitude, longitude){
             return data;
         })
         .then(function(data){
+            //move information into the specified object for the current day forecast, which is an object of objects
             weatherForecast.dayOne.date = currentDate(data.daily[1].dt); 
             weatherForecast.dayOne.iconId = data.daily[1].weather[0].icon; 
             weatherForecast.dayOne.description = data.daily[1].weather[0].description; 

@@ -2,7 +2,10 @@
 
 
 /*
-
+This function will be rendered upon accessing the screen. The function will create
+a data table and get the api to pass it to another function to display the results 
+on the table.  The table will be appeneded onto the id weatherTable to display the table
+on the screen.   Values to be accessed in the api are specified in this function.  
 */
 $(document).ready(function () {
     let key = "431b45917c54f45c9821d34e4a34c843"; 
@@ -27,6 +30,7 @@ $(document).ready(function () {
     "pageLength": 10
     });
     },
+    //error 
     error: function (xhr, status, error) {
     console.log("Error: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
     }

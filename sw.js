@@ -12,6 +12,9 @@
 //     );
 //   });
 
+/*
+dynamic caching
+*/
 self.addEventListener('fetch', function(event) {
     event.respondWith(
       caches.open('mysite-dynamic').then(function(cache) {
@@ -95,6 +98,9 @@ self.addEventListener('fetch', function(event) {
 // });
 
 
+/*
+Specifeid files to be cached 
+*/
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
 
@@ -111,6 +117,9 @@ var urlsToCache = [
     'src/js/weatherApp.js'
 
 ];
+
+/*
+*/
 
 self.addEventListener('install', function(event) {
   // Perform install steps

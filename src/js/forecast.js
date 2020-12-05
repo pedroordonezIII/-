@@ -1,3 +1,4 @@
+//api key to access users API.  
 let key = "431b45917c54f45c9821d34e4a34c843"; 
 
 /**
@@ -77,7 +78,8 @@ function displayLocation(lat,lon){
 
 /*
 function that will take the latitude and longitude to pass to the API.  This function will 
-contain an ajax request that will 
+contain an ajax request that will get the api and post a table to the screen.  A table will 
+be created and the api results will be used to be display on the table.  
 */
 function displayData(lat,lon) {
     $.ajax({

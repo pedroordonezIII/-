@@ -1,3 +1,6 @@
+/*
+update the service worker
+*/
 navigator.serviceWorker.register('sw.js').then(reg => {
     reg.installing; // the installing worker, or undefined
     reg.waiting; // the waiting worker, or undefined

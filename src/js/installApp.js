@@ -2,7 +2,7 @@ let defferedPrompt;
 
 
 /*
-W
+Functionality to use a button to install the application to the users homescreen.  
 */
 window.addEventListener("beforeinstallprompt", (e) => {
 
@@ -30,6 +30,7 @@ the usert will be given the option to install the application
 to their homescreen 
 **/
 btnAdd.addEventListener("click", (e) => {
+	//hide the bytton
 	btnAdd.style.display = "none"; 
 
 	deferredPrompt.prompt();

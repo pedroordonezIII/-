@@ -13,12 +13,18 @@ document.querySelector('form.formInput').addEventListener('submit', function (e)
     //called to display the current weather
     //searchWeather(search.value); 
     //function called to display the forecast
+    //will pass the search calue to this function to display the location
     displayCityForecast(search.value);
+    //will pass it to this function to render the city data from the API
     displaySearchedLocation(search.value);
     //$.getJSON(api, searchWeather());
     return false; 
 });  
 
+/*
+Function that takes the unix time stamp to convert the 
+number to a current month, day, and year.  
+*/
 function currentDate(UNIX_timestamp){
     let a = new Date(UNIX_timestamp * 1000);
     let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug',
@@ -30,6 +36,11 @@ function currentDate(UNIX_timestamp){
     return currentDate; 
 }
 
+/*
+function that takes in the input value from the form and passes that value to the api.
+The api is then used to render information such as the city name and country.  The function
+will also check for errors based on user input. 
+*/
 function displaySearchedLocation(city){
     let api = `https://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&units=imperial&appid=${key}`;
     console.log(api);
@@ -60,6 +71,11 @@ function displaySearchedLocation(city){
     });
 }
 
+/*
+function that takes in the city search value submitted by the form and gets
+all the data based on that city.  This function will Post a data table based 
+on the api results. 
+*/
 function displayCityForecast(city) {
     $.ajax({
     type: "POST",
@@ -89,6 +105,11 @@ function displayCityForecast(city) {
     });
     };
 
+    /*
+    function that takes the json result and gets all the values and sets 
+    them to variable.  These values will then be displayed in the table 
+    for the corresponding column.  
+    */
     function CreateWeatherJson(json) {
     var newJson = "";
     for (i = 0; i < json.list.length; i++) {

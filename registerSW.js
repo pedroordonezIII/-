@@ -1,3 +1,8 @@
+/*
+Register the service worker by passing in the file sw.js which contains 
+the service worker.  
+*/
+
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
       navigator.serviceWorker.register('sw.js').then(function(registration) {
