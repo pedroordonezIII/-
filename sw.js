@@ -15,29 +15,35 @@
 /*
 dynamic caching
 */
-self.addEventListener('fetch', function(event) {
-    event.respondWith(
-      caches.open('mysite-dynamic').then(function(cache) {
-        return cache.match(event.request).then(function (response) {
-          return response || fetch(event.request).then(function(response) {
-            cache.put(event.request, response.clone());
-            return response;
-          });
-        });
-      })
-    );
-  });
-
 // self.addEventListener('fetch', function(event) {
 //     event.respondWith(
 //       caches.open('mysite-dynamic').then(function(cache) {
-//         return fetch(event.request).then(function(response) {
-//           cache.put(event.request, response.clone());
-//           return response;
+//         return cache.match(event.request).then(function (response) {
+//           return response || fetch(event.request).then(function(response) {
+//             cache.put(event.request, response.clone());
+//             return response;
+//           });
 //         });
 //       })
 //     );
 //   });
+
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.open('mysite-dynamic').then(function(cache) {
+      return fetch(event.request).then(function(response) {
+        cache.put(event.request, response.clone());
+        return response;
+      }).catch(function() {
+      // If both fail, show a generic fallback:
+      return caches.match('/offline.html');
+      // However, in reality you'd have many different
+      // fallbacks, depending on URL & headers.
+      // Eg, a fallback silhouette image for avatars.
+      })
+    })
+  );
+});
 
 // self.addEventListener('fetch', function(event) {
 //     event.respondWith(
@@ -103,8 +109,7 @@ Specifeid files to be cached
 */
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
-    '/',
- //	'index.html',
+    'index.html',
     'cities.html',
     'forecast.html',
     'searchForecast.html',
