@@ -6,7 +6,7 @@ if ('serviceWorker' in navigator) {
         btnAdd2.addEventListener("click", (e) => {
         btnAdd2.style.display = "none";
         registration.update(); 
-      }
+      });
       }, function(err) {
         // registration failed :(
         console.log('ServiceWorker registration failed: ', err);
