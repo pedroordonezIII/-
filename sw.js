@@ -103,7 +103,7 @@ Specifeid files to be cached
 */
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
-  '/'
+  './',
  	'index.html',
     'cities.html',
     'forecast.html',
