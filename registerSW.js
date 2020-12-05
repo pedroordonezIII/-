@@ -3,10 +3,10 @@ if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js').then(function(registration) {
         // Registration was successful
         console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        btnAdd2.addEventListener("click", (e) => {
-        btnAdd2.style.display = "none";
-        registration.update(); 
-      });
+      //   btnAdd2.addEventListener("click", (e) => {
+      //   btnAdd2.style.display = "none";
+      //   registration.update(); 
+      // });
       }, function(err) {
         // registration failed :(
         console.log('ServiceWorker registration failed: ', err);
