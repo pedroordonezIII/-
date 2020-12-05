@@ -34,12 +34,6 @@ self.addEventListener('fetch', function(event) {
       return fetch(event.request).then(function(response) {
         cache.put(event.request, response.clone());
         return response;
-      }).catch(function() {
-      // If both fail, show a generic fallback:
-      return caches.match('offline.html');
-      // However, in reality you'd have many different
-      // fallbacks, depending on URL & headers.
-      // Eg, a fallback silhouette image for avatars.
       })
     })
   );
