@@ -133,7 +133,7 @@ self.addEventListener('fetch', function(event) {
 /*
 Specifeid files to be cached 
 */
-var CACHE_NAME = 'my-site-cache-v1';
+var CACHE_NAME = 'my-site-cache-v2';
 var urlsToCache = [
     'index.html',
     'cities.html',
