@@ -28,7 +28,13 @@ dynamic caching
 //     );
 //   });
 
-// self.addEventListener('fetch', function(event) {
+// 
+
+self.addEventListener('fetch', event => {
+  if (event.request.mode === 'navigate') {
+    // See /web/fundamentals/getting-started/primers/async-functions
+    // for an async/await primer.
+    event.respondWith(async function() {self.addEventListener('fetch', function(event) {
 //   event.respondWith(
 //     caches.open('mysite-dynamic').then(function(cache) {
 //       return fetch(event.request).then(function(response) {
@@ -38,12 +44,6 @@ dynamic caching
 //     })
 //   );
 // });
-
-self.addEventListener('fetch', event => {
-  if (event.request.mode === 'navigate') {
-    // See /web/fundamentals/getting-started/primers/async-functions
-    // for an async/await primer.
-    event.respondWith(async function() {
       // Optional: Normalize the incoming URL by removing query parameters.
       // Instead of https://example.com/page?key=value,
       // use https://example.com/page when reading and writing to the cache.
@@ -160,5 +160,21 @@ self.addEventListener('install', function(event) {
         console.log('Opened cache');
         return cache.addAll(urlsToCache);
       })
+  );
+});
+
+self.addEventListener('activate', event => {
+  // delete any caches that aren't in expectedCaches
+  // which will get rid of static-v1
+  event.waitUntil(
+    caches.keys().then(keys => Promise.all(
+      keys.map(key => {
+        if (!expectedCaches.includes(key)) {
+          return caches.delete(key);
+        }
+      })
+    )).then(() => {
+      console.log('Now ready to handle fetches!');
+    })
   );
 });
