@@ -163,18 +163,18 @@ self.addEventListener('install', function(event) {
   );
 });
 
-self.addEventListener('activate', event => {
-  // delete any caches that aren't in expectedCaches
-  // which will get rid of static-v1
-  event.waitUntil(
-    caches.keys().then(keys => Promise.all(
-      keys.map(key => {
-        if (!expectedCaches.includes(key)) {
-          return caches.delete(key);
-        }
-      })
-    )).then(() => {
-      console.log('Now ready to handle fetches!');
-    })
-  );
-});
+// self.addEventListener('activate', event => {
+//   // delete any caches that aren't in expectedCaches
+//   // which will get rid of static-v1
+//   event.waitUntil(
+//     caches.keys().then(keys => Promise.all(
+//       keys.map(key => {
+//         if (!expectedCaches.includes(key)) {
+//           return caches.delete(key);
+//         }
+//       })
+//     )).then(() => {
+//       console.log('Now ready to handle fetches!');
+//     })
+//   );
+// });
